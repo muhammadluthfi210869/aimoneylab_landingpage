@@ -3,35 +3,21 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-obsidian text-white antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply bg-obsidian text-white antialiased font-sans selection:bg-gold-500 selection:text-black;
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-@layer utilities {
-  @keyframes shimmer {
-
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300;
   }
 
-  .animate-shimmer {
-    background-size: 200% 200%;
-    animation: shimmer 3s ease-in-out infinite;
+  .bg-300\% {
+    background-size: 300% 300%;
   }
 }

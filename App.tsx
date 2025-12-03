@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Hero } from './components/Hero';
-import { RealityCheck } from './components/RealityCheck';
 import { IdentityShift } from './components/IdentityShift';
-import { Arsenal } from './components/Arsenal';
-import { OfferStack } from './components/OfferStack';
 import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { StickyCTA } from './components/StickyCTA';
-import { RealityBridge } from './components/RealityBridge';
 import { ArrowUp } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -41,20 +37,15 @@ const App: React.FC = () => {
       </div>
 
       <div className="relative z-10">
+        {/* Section 1: Hero */}
         <Hero />
-        <div id="reality-check">
-          <RealityCheck />
-        </div>
+
+        {/* Section 2: Comparison (Identity Shift) */}
         <div id="identity-shift">
           <IdentityShift />
         </div>
-        <div id="arsenal">
-          <Arsenal />
-        </div>
-        <RealityBridge />
-        <div id="offer">
-          <OfferStack />
-        </div>
+
+        {/* Section 3: FAQ & Closing */}
         <FAQ />
         <FinalCTA />
       </div>
